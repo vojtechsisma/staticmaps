@@ -472,6 +472,11 @@ class StaticMaps {
             left,
           }])
           .toBuffer();
+
+        if (marker.text) {
+          const text = new Text(marker.text)
+          await this.drawSVG([text], (c) => this.textToSVG(c))
+        }
       });
     });
     return asyncQueue(queue);

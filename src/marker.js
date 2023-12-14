@@ -5,6 +5,8 @@ export default class {
     this.coord = this.options.coord;
     this.img = this.options.img;
 
+    this.text = this.options.text;
+
     this.height = Number.isFinite(this.options.height)
       ? Number(this.options.height) : null;
     this.width = Number.isFinite(this.options.width)
